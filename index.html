@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="layout.css">
+    <title>applePay-buttonDEMO</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        
+        <div class="header-top">
+        <!-- Logo zone -->
+            <div class="heard-top-left">
+                <div class="header-logo">
+                    <a href="https://www.domohornwrinkle.com.tw/">
+                        <img src="./img/logo_cmn_01.png" alt="DomohornWrinkle">
+                    </a>
+                </div>
+            </div>
+        <!-- TEL zone -->
+            <div class="heard-top-right">
+                <div class="ico-tel-01">
+                    <p class="ico-tel">免費客服專線</p>
+                </div>
+                <div class="txt-tel-01">
+                    <sapm>0800-866-866</span>
+                    <span class="txt-tel-sm-01">
+                        ※手機也可以免費撥打　9:00～21:00　※元旦、大年初一公休
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- payment -->
+    <section class="payment">
+        <div class="payment-input">
+            <div class="payment-input-main">
+                <!-- title -->
+                <div class="payment-input-title">
+                    <h2>Step 3 <span>付款方式</span></h02>
+                </div>
+                <!-- 副Sub -->
+                <div class="payment-input-sub">
+                    <h3>付款方式
+                        <span class="sub">必填</span>
+                    </h3>
+                </div>
+                <!-- Tab -->
+                <div class="tab-from">
+                    <div class="tab-from-info">
+                        <!-- button -->
+                        <div class="label-main">
+                            
+                            <div class="label-item">
+                                <!-- 1. -->
+                                <div class="label-item-btn">
+                                    <span class="point"><b class=""></b></span>
+                                    <h5>信用卡付款／LINE Pay</h5>
+                                </div>
+                                <!-- 2. -->
+                                <div class="label-item-btn">
+                                    <span  class="point"><b></b></span>
+                                    <h5>信用卡付款／Apple Pay</h5>
+                                </div>
+                                <!-- 3. -->
+                                <div class="label-item-btn">
+                                    <span><b></b></span>
+                                    <h5>貨到付款(現金)</h5>
+                                </div>
+                                <!-- 4. -->
+                                <div class="label-item-btn">
+                                    <span><b></b></span>
+                                    <h5>貨到付款(信用卡)</h5>
+                                </div>
+                            </div>
+
+                            <div class="label-con">
+                                <div class="con-item">
+                                    <p>選擇「信用卡付款/LINE PAY」後，需先點擊「前往確認畫面」至下一頁，
+                                        <br>
+                                        確認訂單無誤並點擊「送出訂單」後畫面會跳轉至信用卡及LINE PAY付款頁面，
+                                        <br>
+                                        於該頁面選擇信用卡一次付清或分期付款並輸入卡號等資訊後送出即完成付款手續。
+                                    </p>
+                                </div>
+                                <div class="con-item">
+                                    <p>選擇「信用卡付款/Apple PAY」後， 需要使用Safari 瀏覽器
+                                        <br>
+                                        確認訂單無誤並點擊「送出訂單」後畫面會跳轉至信用卡及LINE PAY付款頁面，
+                                        <br>
+                                        於該頁面選擇信用卡一次付清或分期付款並輸入卡號等資訊後送出即完成付款手續。
+                                    </p>
+                                </div>
+                                <div class="con-item">
+                                    <p>請將款項交付給宅配公司</p>
+                                </div>
+                                <div class="con-item">
+                                    <p>在商品寄送到府時，可以使用下述發卡組織之信用卡，一次付清免手續費。</p>
+                                    
+                                    <div class="credit-card">
+                                        <div class="credit-card-item">
+                                            <img src="./img/ico_credit_card_visa_01.png" alt="" srcset="">
+                                        
+                                        </div>
+                                        <div class="credit-card-item">
+                                            <img src="./img/ico_credit_card_master_01.png" alt="" srcset="">
+                                         
+                                        </div>
+                                        <div class="credit-card-item">
+                                            <img src="./img/ico_credit_card_jcb_01.png" alt="" srcset="">
+                                           
+                                        </div>    
+                                    </div>
+                                    <br>
+                                    <p>※信用卡無息分期付款不適用於貨到付款</p>
+                                
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+    <footer></footer>
+    <script>
+        window.onload = function(){
+        let btn = document.querySelectorAll('.label-item-btn');
+        let con = document.querySelectorAll('.con-item');
+       
+       for(var i=0;i<btn.length;i++){
+            btn[i].setAttribute('index',i)
+            btn[i].addEventListener('click',function(){
+
+                var index = this.getAttribute('index');
+                for(var i=0;i<con.length;i++){
+                    con[i].style.display = 'none';
+                }
+                con[index].style.display = 'block';
+
+
+            })
+       }
+            
+
+    }
+   
+
+
+
+    </script>
+</body>
+</html>
